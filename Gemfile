@@ -59,5 +59,8 @@ gem 'cancancan'
 gem 'draper'
 gem 'pundit'
 
-#css
-gem "active_material", github: "vigetlabs/active_material"
+gem 'active_skin'
+
+gem 'kaminari'
+
+

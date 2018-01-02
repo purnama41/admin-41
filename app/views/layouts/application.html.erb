@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Administrator</title>
+    <title>Paper Jump - Books Online Store</title>
     <%= csrf_meta_tags %>
+
+    <%= csrf_meta_tags %>
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= controller.controller_name %>">
+    <div id="banner">
+      <%= image_tag 'national_logo.png', alt: 'The Pragmatic Bookshelf' %>
+      <span class="title"><%= @page_title %></span>
+
+      <p style="text-align: right; vertical-align: middle; font-color: #f3683a"><%= link_to 'Login', admin_users_url %></p>
+
+    </div>
+    <div id="columns">
+      <div id="side">
+        <ul>
+          <li><%= link_to 'Home', store_index_url %></li>
+          <li><a href="http://www..../faq">Questions</a></li>
+          <li><a href="http://www..../news">News</a></li>
+          <li><a href="http://www..../contact">Contact</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
