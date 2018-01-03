@@ -63,4 +63,11 @@ gem 'active_skin'
 
 gem 'kaminari'
 
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+#javascript framework
+gem 'webpacker', '~> 2.0'
+#untuk menjalankan multiple command line di satu terminal (procfile)
+gem 'foreman'
 
